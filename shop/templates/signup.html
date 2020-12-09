@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Create A New Account{% endblock %}
+
+{% block body %}
+
+<div class="container" style="width:600px;">
+    <div class="my-4">
+        <div class="text-center mx-5 px-5">
+            <h1><strong>Create A New Account</strong></h1>
+            <hr style="height:2px; border:none; color:#426cf5; background-color:#426cf5;"/>
+        </div>
+        <div class="mx-5 px-5">
+            <form id="formRegister" action="/signup/" method="POST">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{message}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <script>
+                                $('.alert').alert()
+                            </script>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="email" class="mb-0">Enter Your E-mail Address</label>
+                        <input type="email" class="form-control" name="email" value="{{email}}" placeholder="E-mail" required> </div>
+                    <div class="form-group col-md-6 font-weight-bold">
+                        <label for="fname" class="mb-0">Enter Your First Name</label>
+                        <input type="text" class="form-control" name="fname" value="{{fname}}" placeholder="First Name" required> </div>
+                    <div class="form-group col-md-6 font-weight-bold">
+                        <label for="lname" class="mb-0">Enter Your Last Name</label>
+                        <input type="text" class="form-control" name="lname" value="{{lname}}" placeholder="Last Name" required> </div>
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="phone" class="mb-0">Enter Your Mobile Number</label>
+                        <input type="tel" class="form-control" name="phone" value="{{phone}}" placeholder="Mobile Number" required> </div>
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="pass1" class="mb-0">Choose Password</label>
+                        <input type="password" class="form-control" name="pass1" placeholder="Password" required> </div>
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="pass2" class="mb-0">Confirm Password</label>
+                        <input type="password" class="form-control" name="pass2" placeholder="Password" required> </div>
+                    <div class="form-group col-md-12">
+                        <input class="mb-0" type="checkbox" value="" id="tnc" required>
+                        <label class="mb-0" for="tnc">
+                            I accept the Terms of Use & Privacy Policy
+                        </label> </div>
+                </div>
+                <div class="text-center mt-2">
+                    <button type="submit" class="btn hvr-hover col-lg-4" style="color:white;">Create Account</button>
+                </div>
+            </form>
+        </div>
+        <div class="text-center mt-2">
+            <p><strong>OR</strong></p>
+        </div>
+        <div class="text-center mt-2">
+            <a href="/login" class="btn hvr-hover col-lg-6" style="color:white;">Existing Customer? Log in here</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

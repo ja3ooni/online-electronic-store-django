@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Login to your Account{% endblock %}
+
+{% block body %}
+
+<div class="container" style="width:600px;">
+	<div class="my-4">
+		<div class="text-center mx-5 px-5">
+				<h1><strong>Login to your Account</strong></h1>
+				<hr style="height:2px; border:none; color:#426cf5; background-color:#426cf5;"/>
+		</div>
+        <div class="mx-5 px-5">
+            <form id="formRegister" action="/login/" method="POST">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{message}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <script>
+                                $('.alert').alert()
+                            </script>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="email" class="mb-0">E-mail</label>
+                        <input type="email" class="form-control" name="email" value="{{email}}" placeholder="" required> </div>
+                    <div class="form-group col-md-12 font-weight-bold">
+                        <label for="password" class="mb-0">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="" required> </div>
+                </div>
+                <div class="text-center mt-2">
+                    <button type="submit" class="btn hvr-hover col-lg-2" style="color:white;">Log In</button>
+                </div>
+            </form>
+        </div>
+        <div class="text-center mt-2">
+            <p><strong>OR</strong></p>
+        </div>
+        <div class="text-center mt-2">
+            <a href="/signup" class="btn hvr-hover col-lg-7" style="color:white;">New to Lifestyle Eletronics? Create An Account</a>
+        </div>
+	</div>
+</div>
+
+{% endblock %}
