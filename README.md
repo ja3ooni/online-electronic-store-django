@@ -1,4 +1,4 @@
-Online Electronic Store with Python and Django
+# Online Electronic Store with Python and Django
 
 1. Clone This Project git clone https://github.com/ujjawal30/online_electronic_store_django.git
 2. Go to Project Directory cd online_electronic_store_django
