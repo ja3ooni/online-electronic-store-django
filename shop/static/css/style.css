@@ -20,13 +20,7 @@ IMPORT FILES
 
 @import url(all.css);
 @import url(superslides.css);
-@import url(bootstrap-select.css);
-@import url(carousel-ticker.css);
-@import url(code_animate.css);
 @import url(bootsnav.css);
-@import url(owl.carousel.min.css);
-@import url(jquery-ui.css);
-@import url(baguetteBox.min.css);
 @import url(custom.css);
 
 /*------------------------------------------------------------------
@@ -335,8 +329,6 @@ p {
 .our-link ul li:last-child {
     border: none;
 }
-
-.main-header {}
 
 .search a {
     color: #426cf5;
@@ -702,8 +694,6 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
     left: auto;
 }
 
-.btn-cart {}
-
 .cart-list h6 a {
     font-size: 16px;
     font-weight: 700;
@@ -765,8 +755,6 @@ ul.cart-list p .price {
     transform: scaleY(1);
     color: #ffffff;
 }
-
-.hvr-hover {}
 
 ul.cart-list>li.total>.btn:hover {
     color: #ffffff;
@@ -1009,8 +997,6 @@ ul.cart-list>li.total>.btn:hover {
 .filter-button-group button.active {
     background: #010101;
 }
-
-.filter-button-group button {}
 
 .products-single {
     overflow: hidden;
@@ -1469,8 +1455,6 @@ ul.cart-list>li.total>.btn:hover {
     color: #426cf5;
     border-color: #426cf5;
 }
-
-.footer-link {}
 
 .footer-link h4 {
     color: #ffffff;
@@ -2289,7 +2273,7 @@ ul.cart-list>li.total>.btn:hover {
     box-shadow: none;
     color: #fff;
     display: inline-block;
-    float: right;
+    /*float: right;*/
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
@@ -2467,8 +2451,6 @@ ul.cart-list>li.total>.btn:hover {
 .service-icon i {
     font-size: 34px;
 }
-
-.my-account-page a:hover i {}
 
 .service-desc p {
     font-size: 16px;
@@ -2823,8 +2805,6 @@ ul.cart-list>li.total>.btn:hover {
     border: none;
 }
 
-.share-bar {}
-
 .share-bar a {
     background: #426cf5;
     color: #ffffff;
@@ -2833,10 +2813,6 @@ ul.cart-list>li.total>.btn:hover {
     width: 34px;
     text-align: center;
 }
-
-.share-bar a {}
-
-.featured-products-box {}
 
 .featured-products-box .owl-nav {
     position: absolute;

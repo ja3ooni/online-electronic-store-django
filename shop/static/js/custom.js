@@ -58,111 +58,11 @@
     });
 
     /* ..............................................
-       Special Menu
-       ................................................. */
-
-    var Container = $('.container');
-    Container.imagesLoaded(function() {
-        var portfolio = $('.special-menu');
-        portfolio.on('click', 'button', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: filterValue
-            });
-        });
-        var $grid = $('.special-list').isotope({
-            itemSelector: '.special-grid'
-        });
-    });
-
-    /* ..............................................
-       BaguetteBox
-       ................................................. */
-
-    baguetteBox.run('.tz-gallery', {
-        animation: 'fadeIn',
-        noScrollbars: true
-    });
-
-    /* ..............................................
-       Offer Box
-       ................................................. */
-
-    $('.offer-box').inewsticker({
-        speed: 3000,
-        effect: 'fade',
-        dir: 'ltr',
-        font_size: 13,
-        color: '#ffffff',
-        font_family: 'Montserrat, sans-serif',
-        delay_after: 1000
-    });
-
-    /* ..............................................
        Tooltip
        ................................................. */
 
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
-    });
-
-    /* ..............................................
-       Owl Carousel Instagram Feed
-       ................................................. */
-
-    $('.main-instagram').owlCarousel({
-        loop: true,
-        margin: 0,
-        dots: false,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
-        responsive: {
-            0: {
-                items: 2,
-                nav: true
-            },
-            600: {
-                items: 4,
-                nav: true
-            },
-            1000: {
-                items: 8,
-                nav: true,
-                loop: true
-            }
-        }
-    });
-
-    /* ..............................................
-       Featured Products
-       ................................................. */
-
-    $('.featured-products-box').owlCarousel({
-        loop: true,
-        margin: 0,
-        dots: false,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 3,
-                nav: true
-            },
-            1000: {
-                items: 4,
-                nav: true,
-                loop: true
-            }
-        }
     });
 
     /* ..............................................
@@ -185,25 +85,6 @@
         });
     });
 
-
-    /* ..............................................
-       Slider Range
-       ................................................. */
-
-    $(function() {
-        $("#slider-range").slider({
-            range: true,
-            min: 0,
-            max: 4000,
-            values: [1000, 3000],
-            slide: function(event, ui) {
-                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-            }
-        });
-        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-            " - $" + $("#slider-range").slider("values", 1));
-    });
-    
 	/* ..............................................
 	   NiceScroll
 	   ................................................. */
