@@ -11,11 +11,11 @@ Search Results | Lifestyle Electronics
 
 <div class="shadow p-2 rounded" style="background-color:#e9ecef; color:black">
     <div class="row text-center font-weight-bold">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-4 col-sm-6">
             <p><a href="/search/?search={{search}}">All Products</a></p>
         </div>
         {% for category in categories %}
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-4 col-sm-6">
             <p><a href="/search/?search={{search}}&category={{category.id}}">{{category.category_name}}</a></p>
         </div>
         {% endfor %}
@@ -72,12 +72,14 @@ Search Results | Lifestyle Electronics
                                                 <p class="sale">Sale</p>
                                             </div>
                                             <img src="{{product.product_img.url}}" class="img-fluid" alt="Image">
+                                            <div class="mask-icon"></div>
                                         </div></a>
                                         <div class="why-text text-center" style="height:155px;">
                                             <a href="/productdetail/{{product.id}}">
                                             <h4 id="namepr{{product.id}}">{{product.product_name}}</h4>
                                             <h5>₹ {{product.price|intcomma}}</h5></a>
                                             <div class="mt-2">
+                                                <a href="/buynow/{{product.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
                                                 <a href="/addtocart/{{product.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
                                             </div>
                                         </div>

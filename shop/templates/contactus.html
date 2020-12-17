@@ -10,11 +10,11 @@ Contact Us | Lifestyle Electronics
 
 <div class="shadow p-2 rounded" style="background-color:#e9ecef; color:black">
     <div class="row text-center font-weight-bold">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-4 col-sm-6">
             <p><a href="/products">All Products</a></p>
         </div>
         {% for category in categories %}
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-md-4 col-sm-6">
             <p><a href="/products/?category={{category.id}}">{{category.category_name}}</a></p>
         </div>
         {% endfor %}

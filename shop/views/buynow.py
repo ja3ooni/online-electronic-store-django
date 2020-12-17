@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
+from django.http.response import HttpResponseRedirect
 from shop.models import ShopCart
-from django.shortcuts import redirect
 
 @login_required(login_url='/login')
 def buynow(request, prid):
@@ -11,4 +11,4 @@ def buynow(request, prid):
     data.product_id = prid
     data.qty = 1
     data.save()
-    return redirect('Cart')
+    return HttpResponseRedirect('/cart')

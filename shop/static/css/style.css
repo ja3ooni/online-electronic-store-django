@@ -26,6 +26,9 @@ IMPORT FILES
 /*------------------------------------------------------------------
 SKELETON
 -------------------------------------------------------------------*/
+html {
+    overflow-x: hidden;
+}
 
 body {
     color: #666666;
@@ -1100,7 +1103,7 @@ ul.cart-list>li.total>.btn:hover {
 }
 
 .products-single .mask-icon {
-    background: rgba(1, 1, 1, 0.5);
+    background: rgba(1, 1, 1, 0.2);
     top: -100%;
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
