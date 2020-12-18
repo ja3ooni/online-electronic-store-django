@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 from django.forms import ModelForm
+from django.utils.timezone import now
 
 
 class Customer(models.Model):
@@ -117,7 +118,7 @@ class Review(models.Model):
 class Wishlist(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    added_on = models.DateTimeField(auto_now_add=True)
+    added_on = models.DateTimeField(auto_now=True, blank=True)
 
     def __str__(self):
         return self.user.first_name + " - " + self.product.product_name

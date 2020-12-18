@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 from .views import index, signup, login, productdetail, products, addtocart, buynow, checkout, logout, cart, account, deletefromcart
 from .views import addtowishlist, removefromwishlist, search, updateprofile, changepassword, postreview, contact, about
+from django.conf import settings
 
 urlpatterns = [
     path("", index.index, name="ShopHome"),
@@ -25,3 +26,9 @@ urlpatterns = [
     path("account/changepassword/", changepassword.changepassword, name="ChangePassword"),
     path("logout/", logout.logout_view, name="Logout")
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
